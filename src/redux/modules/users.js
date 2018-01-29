@@ -7,8 +7,8 @@
 // initial state
 
 const initialState = {
-    isLoggedIn: false;
-}
+    isLoggedIn: false
+};
 
 // reducer
 
