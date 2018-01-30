@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
-import styles from './styles.scss';
+import { connect } from "react-redux";
+import Container from "./container";
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                App
-            </div>
-        );
-    }
-}
+const mapStateToProps = (state, ownProps) => {
+    const { user } = state;
+    return {
+        isLoggedIn: user.isLoggedIn
+    };
+};
 
-export default App;
+export default connect()(Container);
